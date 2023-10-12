@@ -1,0 +1,39 @@
+{
+  "entryPagePath": "pages/index/index",
+  "pages": [
+    "pages/index/index",
+    "pages/finish/finish",
+    "pages/unfinish/unfinish"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#15559a",
+    "navigationBarTitleText": "待办事件",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#333",
+    "borderStyle": "black",
+    "position": "bottom",
+    "backgroundColor": "#eee",
+    "list": [{
+      "pagePath":"pages/index/index",
+      "text": "事件列表",
+      "iconPath":"/assets/AllOrders.png",
+      "selectedIconPath":"/assets/AllOrdersSelection.png"
+    },{
+      "pagePath":"pages/finish/finish",
+      "text": "已完成",
+      "iconPath":"/assets/yiwancheng.png",
+      "selectedIconPath":"/assets/yiwanchengSelection.png"
+    },{
+      "pagePath":"pages/unfinish/unfinish",
+      "text": "未完成",
+      "iconPath":"/assets/weiwancheng.png",
+      "selectedIconPath":"/assets/weiwanchengSelection.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

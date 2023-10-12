@@ -1,0 +1,21 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+	<input type="text" name="" id="" placeholder="请输入任务名称..." class="input-item" model:value="{{inputContent}}" bind:input="handleInput" />
+	<button class="btn-item" bind:tap="handleTapAdd">添加任务事项</button>
+	<view class="main-container">
+		<view class="top">
+			<text class="title">任务列表：</text>
+			<text class="number">共 {{list.length}} 项</text>
+		</view>
+		<view class="handle">
+			<button class="handle-item" disabled="{{list.length===0}}" bind:tap="handleTapAll">全部完成</button>
+			<button class="handle-item" disabled="{{list.length===0}}" bind:tap="handleDelete"><text class="iconfont icon-shanchuwenjian">全部删除</text></button>
+		</view>
+		<view class="task-Item-container">
+			<view wx:if="{{list.length===0}}" class="empty">任务列表为空</view>
+			<block wx:else>
+				<tasklist wx:for="{{list}}" wx:key="this" class="taskItemClass" task="{{item}}" bind:renovate="handleChange" ></tasklist>
+			</block>
+		</view>
+	</view>
+</view>

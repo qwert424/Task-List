@@ -1,0 +1,14 @@
+<!--pages/unfinish/unfinish.wxml-->
+
+<view class="container">
+	<view class="top">
+		<text class="title">任务列表：</text>
+		<text class="number">共 {{list.length}} 项</text>
+	</view>
+	<view class="task-Item-container">
+		<view wx:if="{{list.length===0}}" class="empty">任务列表为空</view>
+		<block wx:else>
+			<tasklist wx:for="{{list}}" wx:key="this" class="taskItemClass" task="{{item}}" bind:renovate="handleChange"></tasklist>
+		</block>
+	</view>
+</view>

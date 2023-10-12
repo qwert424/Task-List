@@ -1,0 +1,6 @@
+<!--components/taskList/taskList.wxml-->
+<view class="tasklist-container class">
+	<checkbox checked="{{task.ifComplete}}" bind:tap="handleChange" />
+	<text class="content {{task.ifComplete ? 'isComplete' : ''}}">{{task.content}}</text>
+	<button size="mini" class="btn" bind:tap="handleDelete"><text class="iconfont icon-shanchuwenjian delete">删除</text></button>
+</view>
